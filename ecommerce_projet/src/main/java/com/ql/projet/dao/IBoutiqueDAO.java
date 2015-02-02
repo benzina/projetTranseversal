@@ -37,7 +37,7 @@ public interface IBoutiqueDAO {
 	public void ajouterUser(User u);
 	public void attribuerRole(Role r,Long userID);
 	
-	//gestion des users
+	//gestion des commandes
 	public Commande enregistrerComande(Panier p,Client c);
 	
 	//gestion des clients

@@ -5,13 +5,14 @@ import java.util.List;
 
 
 
+
+
 import org.springframework.transaction.annotation.Transactional;
 
 import com.ql.projet.dao.IBoutiqueDAO;
 import com.ql.projet.model.Categorie;
 import com.ql.projet.model.Client;
 import com.ql.projet.model.Commande;
-import com.ql.projet.model.LigneCommande;
 import com.ql.projet.model.Panier;
 import com.ql.projet.model.Produit;
 import com.ql.projet.model.Role;
@@ -110,6 +111,44 @@ public class BoutiqueMetierImpl implements IAdminMetier {
 	public void attribuerRole(Role r, Long userID) {
 
 		dao.attribuerRole(r, userID);
+	}
+
+	@Override
+	public Commande enregistrerComande(Panier p, Client c) {
+		
+		return dao.enregistrerComande(p, c);
+	}
+
+	@Override
+	public Long ajouterClient(Client cl) {
+		
+		return dao.ajouterClient(cl);
+	}
+
+	@Override
+	public void modifierClient(Client cl) {
+
+		dao.modifierClient(cl);
+		
+	}
+
+	@Override
+	public void supprimerClient(Long idClient) {
+
+		dao.supprimerClient(idClient);
+		
+	}
+
+	@Override
+	public List<Client> listClients() {
+		
+		return dao.listClients();
+	}
+
+	@Override
+	public Client getClient(Long idClient) {
+		
+		return dao.getClient(idClient);
 	}
 
 }
