@@ -3,9 +3,7 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/resources/css/style1.css"/>
 </head>
-<div class="errors">
-  ${exception} 
-</div>
+
 <div id="formCat" class="cadre">
 
 	<f:form modelAttribute="categorie" action="saveCat" method="post"
