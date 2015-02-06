@@ -40,9 +40,6 @@
 		</bean>
 		
 		
-		
-		
-		
 		<tx:annotation-driven transaction-manager="transactionManager"/>
 		<context:annotation-config></context:annotation-config>
 		
@@ -62,6 +59,7 @@
 				authorities-by-username-query="select u.nomUser, r.nomRole 
 		from user u, role r where u.idUser = r.idUser and u.nomUser=?" />
 		</s:authentication-provider>
+		
 	</s:authentication-manager>
 		
 </beans>

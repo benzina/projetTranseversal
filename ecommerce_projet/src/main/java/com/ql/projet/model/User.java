@@ -15,7 +15,7 @@ public class User implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long idUser;
-	private String NomUser;
+	private String nomUser;
 	private String password;
 	private boolean actived;
 	@OneToMany
@@ -25,25 +25,28 @@ public class User implements Serializable{
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
 	public User(String nomUser, String password, boolean actived,
 			Collection<Role> roles) {
 		super();
-		NomUser = nomUser;
+		this.nomUser = nomUser;
 		this.password = password;
 		this.actived = actived;
 		this.roles = roles;
 	}
+
 	public Long getIdUser() {
 		return idUser;
 	}
 	public void setIdUser(Long idUser) {
 		this.idUser = idUser;
 	}
+	
 	public String getNomUser() {
-		return NomUser;
+		return nomUser;
 	}
 	public void setNomUser(String nomUser) {
-		NomUser = nomUser;
+		this.nomUser = nomUser;
 	}
 	public String getPassword() {
 		return password;
